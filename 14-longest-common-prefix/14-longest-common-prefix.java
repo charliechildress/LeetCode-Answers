@@ -8,17 +8,13 @@ class Solution {
             for (int j = 1; j < strs.length; j++) {
                 if (i < strs[j].length()){
                     if (strs[j].charAt(i) != c) {
-                    prefix = false;
                     return answer;
                     }
                 } else {
-                    prefix = false;
                     return answer;
                 }
             }
-            if (prefix) {
-                answer += strs[0].substring(i, i + 1);
-            }
+            answer += strs[0].substring(i, i + 1);
         }
         return answer;
     }
